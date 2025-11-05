@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>グリッドテンプレート for Bootstrap · Bootstrap</title>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Bootstrap グリッドサンプル</h1>
+    <p class="lead">Bootstrap グリッドシステムを用いたグリッドの作成になれるための基本的なグリッドレイアウトです。</p>
+
+    <h2>5段階のグリッド</h2>
+    <p>Bootstrap グリッドシステムには5つの段階があり, それぞれ異なる画面サイズのデバイスをサポートします。各段階は最小のビューポートサイズから始まり, 上書きされない限り自動的により大きいデバイスに適用されます。</p>
+
+    <ul>
+      <li> - : なし　スマートフォン（縦持ち）IoT 端末など　576px 未満</li>
+      <li>sm : Small　スマートフォン（横持ち）など　576px 以上</li>
+      <li>md : Mediumタブレット端末など　768px 以上</li>
+      <li>lg : Largeノート PC などの省サイズモニタ　992px 以上</li>
+      <li>xl : Extra Largeデスクトップ PC などの大画面モニタ　1200px 以上</li>
+    </ul>
+
+    <div class="row">
+      <div class="col-4">.col-4</div>
+      <div class="col-4">.col-4</div>
+      <div class="col-4">.col-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">.col-sm-4</div>
+      <div class="col-sm-4">.col-sm-4</div>
+      <div class="col-sm-4">.col-sm-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4">.col-md-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">.col-lg-4</div>
+      <div class="col-lg-4">.col-lg-4</div>
+      <div class="col-lg-4">.col-lg-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-4">.col-xl-4</div>
+      <div class="col-xl-4">.col-xl-4</div>
+      <div class="col-xl-4">.col-xl-4</div>
+    </div>
+
+    <h2>3つの等幅カラム</h2>
+    <p>3列の等幅カラムは<strong>デスクトップサイズからより大きいデスクトップサイズに対してスケールします。</strong>. モバイルデバイスやタブレットでは, カラムは自動的にスタックされます。</p>
+    <div class="row">
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4">.col-md-4</div>
+    </div>
+
+    <h2>3列の非等幅カラム</h2>
+    <p>様々な幅の<strong>デスクトップサイズからより大きいデスクトップサイズに対してスケールします。</strong>一つの水平なブロックに付きグリッドカラムは12まで並べることができます。</p>
+    <div class="row">
+      <div class="col-md-3">.col-md-3</div>
+      <div class="col-md-6">.col-md-6</div>
+      <div class="col-md-3">.col-md-3</div>
+    </div>
+
+
+    <h2>2列のカラム</h2>
+    <p><strong>デスクトップからより大きいデスクトップサイズに対してスケールします。</strong></p>
+    <div class="row">
+      <div class="col-md-8">.col-md-8</div>
+      <div class="col-md-4">.col-md-4</div>
+    </div>
+
+    <h2>全幅, 単一カラム</h2>
+    <p class="text-warning">全幅の要素にはグリッドクラスは必要ありません。</p>
+
+    <hr>
+
+    <h2>2列のカラムをネストした2列のカラム</h2>
+    <p>ネストはとても簡単で, カラムの中にカラムの列を配置するだけです。このネストされたカラムは, それを含んだカラムと共に<strong>デスクトップからより大きいデスクトップサイズに対してスケールします</strong>。
+    </p>
+    <p>モバイルデバイスやタブレット以下のサイズにおいては, ネストされたカラムとそれを含んだカラムはスタックされます。</p>
+    <div class="row">
+      <div class="col-md-8">
+        .col-md-8
+        <div class="row">
+          <div class="col-md-6">.col-md-6</div>
+          <div class="col-md-6">.col-md-6</div>
+        </div>
+      </div>
+      <div class="col-md-4">.col-md-4</div>
+    </div>
+
+    <hr>
+
+    <h2>混合：モバイルとデスクトップ</h2>
+    <p>Bootstrap v4 のグリッドシステムは xs（最小）, sm（小）, md（中）, lg（大）,
+      xl（より大）の5段階のクラスがあります。これらのクラスを組み合わせてよりダイナミックでフレキシブルなレイアウトを作成することができます。</p>
+    <p>各段階のクラスはスケールアップします。すなわち, もし xs と sm で同じ幅に設定しようとした場合, xs を指定するだけで済みます。</p>
+    <div class="row">
+      <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    </div>
+    <div class="row">
+      <div class="col-6">.col-6</div>
+      <div class="col-6">.col-6</div>
+    </div>
+
+    <hr>
+
+    <h2>混合：モバイル, タブレット, デスクトップ</h2>
+    <p></p>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-lg-8">.col-12 .col-sm-6 .col-lg-8</div>
+      <div class="col-6 col-lg-4">.col-6 .col-lg-4</div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+      <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+      <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+    </div>
+
+  </div> <!-- /container -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

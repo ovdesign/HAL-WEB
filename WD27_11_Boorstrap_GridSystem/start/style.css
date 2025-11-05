@@ -1,0 +1,29 @@
+body {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: #666;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+.row {
+  margin-bottom: 1rem;
+  color: rgb(85, 129, 3);
+}
+.row .row {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+[class*="col-"] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(141, 214, 6);
+  border: 1px solid rgb(85, 129, 3);
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
