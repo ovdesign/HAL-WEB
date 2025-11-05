@@ -1,0 +1,113 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 10px = 1rem */
+  font-feature-settings: "palt"; /* カーニング設定 */
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333;
+}
+
+/* ----------
+ヘッダー部分
+--------------------------------*/
+
+@media (width < 960px) {
+  /* トグルメニュー */
+  #toggle-nav {
+    display: none;
+  }
+  #toggle-nav:checked ~ .toggle {
+    height: 28px;
+  }
+  #toggle-nav:checked ~ .toggle div {
+    background-color: #fff;
+  }
+  #toggle-nav:checked ~ .toggle div:nth-of-type(1) {
+    margin-top: 12px;
+  }
+  #toggle-nav:checked ~ .toggle div:nth-of-type(2) {
+    margin-top: -20px;
+  }
+  #toggle-nav:checked ~ .navigation {
+    opacity: 1;
+    visibility: visible;
+  }
+  .toggle {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    top: 12px;
+    right: 0;
+    width: 32px;
+  }
+  .toggle div {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    transition: background-color 0.5s, transform 0.5s;
+  }
+  .toggle div:nth-of-type(2) {
+    margin: 4px 0;
+  }
+
+  /* メニュー＆背景 */
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out;
+  }
+  .navigation ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navigation ul li {
+    padding-inline: 1rem;
+    font-size: 1.75rem;
+  }
+  .navigation ul li a,
+  .navigationul ul li a:hover {
+    color: #fff;
+  }
+}
+
+/* ----------
+メインビジュアル
+--------------------------------*/
+
+/* ----------
+2カラム部分
+--------------------------------*/
+
+/* ----------
+3カラム部分
+--------------------------------*/
+
+/* ----------
+画像テキスト入れ替えエリア
+--------------------------------*/
+
+/* ----------
+フッターエリア
+--------------------------------*/
