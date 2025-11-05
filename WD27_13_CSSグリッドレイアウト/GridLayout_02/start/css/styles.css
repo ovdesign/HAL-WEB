@@ -1,0 +1,38 @@
+@charset 'utf-8';
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1em 0;
+  background: #363636;
+}
+
+header,
+aside,
+main,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  background-color: #eaeaea;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+header,
+footer {
+  grid-column: 1 / 4;
+}
+
+@media (width < 700px) {
+  aside,
+  main {
+    grid-column: 1 / 4;
+  }
+}
