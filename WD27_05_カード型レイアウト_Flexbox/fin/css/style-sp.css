@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+/* 基本レイアウト
+------------------------------------- */
+.wrapper {
+  width: 100%;
+}
+
+/* ナビゲーション共通
+------------------------------------- */
+.header__navigation ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__navigation ul li a {
+  font-size: 2.4rem;
+  line-height: 2;
+}
+
+/* トグルメニュー
+------------------------------------- */
+#toggle {
+  display: none;
+}
+#toggle-nav:checked ~ .button div {
+  background-color: #86b12e;
+}
+#toggle-nav:checked ~ .button div:nth-of-type(1) {
+  margin-block-start: 0.2rem;
+}
+#toggle-nav:checked ~ .button div:nth-of-type(2) {
+  margin-block-start: -0.2rem;
+}
+#toggle-nav:checked ~ .menu {
+  opacity: 1;
+  visibility: visible;
+}
+.button {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  width: 21px;
+  height: 14px;
+  z-index: 20;
+}
+.button div {
+  width: 16px;
+  height: 16px;
+  background-color: #86b12e;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.button div:nth-of-type(2) {
+  margin: 0.4rem 0;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+
+/* フッター
+------------------------------------- */
+.footer__navigation ul {
+  width: 80%;
+}
+.footer__navigation ul li a {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* メインコンテンツエリア
+------------------------------------- */
+.section__item {
+  /* width: 48%; 変更*/
+  width: calc((100% - 2.4rem) / 2); /*追加*/
+}
+.section__item h2 {
+  font-size: 1.4rem;
+}
+.section__item p {
+  font-size: 1.2rem;
+}
+
+/* -------------------------------------
+secondページ
+------------------------------------- */
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content__img {
+  width: 98%;
+  order: 1;
+}
+.content__text {
+  width: 98%;
+  order: 2;
+}
