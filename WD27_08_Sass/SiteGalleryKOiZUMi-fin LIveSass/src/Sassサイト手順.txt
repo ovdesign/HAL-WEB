@@ -1,0 +1,61 @@
+Sassサイト手順
+
+VSCodeでSassを利用
+
+機能拡張インストール
+「Live Sass Compiler」
+・cssの出力パスの変更(settings.json)
+	Live Sass Compile › Settings: Formats
+	"savePath": "/dist/css" → "savePath": "/css"
+
+	
+カンプを参考にマークアップ
+
+scssフォルダ作成 → フォルダ内にstyle.scssを作成
+	保存すると自動的にcssフォルダ＆cssファイルを作成
+	
+scssフォルダ内にパーシャルファイル（partial file）を作成
+　　各フォルダを作成
+	ファイル名先頭にアンダーバー＆拡張子をscss
+	reset.cssをsrcからコピーbaseフォルダに格納
+	名前を変更　reset.css　→ _reset.scss
+	各パーシャルファイル用のフォルダを作成
+	各フォルダ内にパーシャルファイルを作成
+		_base.scss（基本設定）を作成
+		_variables.scss（変数ファイル）を作成
+		_header.scss（ヘッダー）を作成
+		_footer.scss（フッター）を作成
+		_main.scss（ヘッダー）を作成
+		_button.scss（セカンドページ用ボタン）を作成
+	style.scssにパーシャルファイルを読み込む（@use使用）
+	
+	
+--------------------------------------------------
+	|-- css（html読み込みcss）
+		|-- style.css
+		|-- style.min.css
+		
+
+	|-- scss（sassフォルダー）
+		|-- base
+			|-- _base.scss
+			|-- _reset.scss
+			|-- _variables.scss
+
+		|-- footer
+			|-- _footer.scss
+
+		|-- header
+			|-- _header.scss
+
+		|-- main
+			|-- _main.scss
+
+		|-- module
+			|-- _button.scss
+				
+		|-- style.scss
+--------------------------------------------------
+		
+
+
