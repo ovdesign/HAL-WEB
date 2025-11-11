@@ -1,15 +1,31 @@
 Sassサイト手順
 
-VSCodeでSassを利用
+///////////////////////////////////
+////// VSCodeでSassの利用方法
+///////////////////////////////////
 
-機能拡張インストール
+////// 機能拡張インストール //////
+
 「Live Sass Compiler」
 ・cssの出力パスの変更(settings.json)
-	Live Sass Compile › Settings: Formats
-	"savePath": "/dist/css" → "savePath": "/css"
-
+　// Live Sass Compile設定
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.autoprefix": null,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css"
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/css"
+    }
+  ],
+  
 	
-カンプを参考にマークアップ
+////// カンプを参考にマークアップ //////
 
 scssフォルダ作成 → フォルダ内にstyle.scssを作成
 	保存すると自動的にcssフォルダ＆cssファイルを作成
