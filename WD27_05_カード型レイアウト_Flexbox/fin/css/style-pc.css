@@ -105,7 +105,7 @@ body {
 
 /* メインコンテンツエリア
 ------------------------------------- */
-.main__wrapper {
+.main {
   display: flex;
   flex-wrap: wrap;
   /* justify-content: space-between; 変更 */
@@ -114,7 +114,7 @@ body {
   margin-block-end: 3rem; /*追加*/
 }
 
-.section__item {
+.main__item {
   /* width: 23%; 変更*/
   /* margin-block-end: 3rem; 変更*/
 
@@ -122,31 +122,31 @@ body {
   /* (100% - gap合計) ÷ 列数 で幅を割り出しています。
 （2.4rem × 3 gaps = 7.2rem を引いて 4等分） */
 }
-.section__item img {
+.main__item img {
   width: 100%;
   margin-block-end: 1rem;
   border-radius: 1rem;
 }
-.section__item h2 {
+.main__item h2 {
   margin-block-end: 0.6rem;
   font-size: 1.6rem;
   font-weight: bold;
 }
-.section__item p {
+.main__item p {
   font-size: 1.4rem;
 }
-.section__item a {
+.main__item a {
   display: block;
   color: #86b12e;
   transition: all 0.5s;
 }
-.section__item a:hover {
+.main__item a:hover {
   color: #688924;
 }
-.section__item a img {
+.smain__item a img {
   transition: all 0.5s;
 }
-.section__item a:hover img {
+.main__item a:hover img {
   opacity: 0.7;
 }
 

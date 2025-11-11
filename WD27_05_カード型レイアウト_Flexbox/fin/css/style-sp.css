@@ -83,14 +83,14 @@
 
 /* メインコンテンツエリア
 ------------------------------------- */
-.section__item {
+.main__item {
   /* width: 48%; 変更*/
   width: calc((100% - 2.4rem) / 2); /*追加*/
 }
-.section__item h2 {
+.main__item h2 {
   font-size: 1.4rem;
 }
-.section__item p {
+.main__item p {
   font-size: 1.2rem;
 }
 
