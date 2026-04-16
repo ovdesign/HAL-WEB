@@ -1,0 +1,22 @@
+/////////////////////
+// button
+/////////////////////
+@use "../base/variable" as var;
+
+.button {
+  &__link {
+    margin-block-start: 3rem;
+    padding-block: 0.5rem;
+    padding-inline: 2rem;
+    display: inline-block;
+    background-color: var.$main-color-dark;
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+    color: var.$text-color-light;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: var.$main-color-middle;
+    }
+  }
+}
