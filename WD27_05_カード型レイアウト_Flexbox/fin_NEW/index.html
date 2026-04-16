@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>十勝豆知識</title>
+    <link rel="stylesheet" href="css/kiso.css">
+    <link rel="stylesheet" href="css/style-pc.css">
+    <link rel="stylesheet" href="css/style-tb.css" media="(600px <= width < 960px)">
+    <link rel="stylesheet" href="css/style-sp.css" media="(width < 600px)">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="nav" class="header">
+            <div class="header__logo">
+                <a href="index.html" class="header__logo-link">
+                    <h1>
+                        <img src="images/site-logo.svg" alt="十勝豆知識" class="header__logo-image">
+                    </h1>
+                </a>
+            </div>
+
+            <nav class="header__nav">
+                <input type="checkbox" id="toggle-nav" class="header__nav-checkbox">
+                <label for="toggle-nav" class="header__nav-toggle">
+                    <div class="header__nav-toggle-dot"></div>
+                    <div class="header__nav-toggle-dot"></div>
+                </label>
+
+                <div id="main-navigation" class="header__menu">
+                    <header-navigation-template></header-navigation-template>
+                </div>
+            </nav>
+        </header>
+
+        <div id="slider">
+            <div class="slider__outer">
+                <transition name="fade">
+                    <div class="slider__inner" :key="idx" v-for="(slide, idx) in slides" v-if="current_slide == idx">
+                        <img class="slider__image" v-bind:src="slides[idx].img" key="slides[idx].img">
+                    </div>
+                </transition>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-kuromame.jpg" alt="黒大豆" class="main__item-image">
+                    <h2 class="main__item-title">黒大豆</h2>
+                    <p class="main__item-text">おなじみの黒豆</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-uzuramame.jpg" alt="うずら豆" class="main__item-image">
+                    <h2 class="main__item-title">うずら豆</h2>
+                    <p class="main__item-text">うずらみたいな豆</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-tebo.jpg" alt="手亡" class="main__item-image">
+                    <h2 class="main__item-title">手亡</h2>
+                    <p class="main__item-text">この名前って？</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-azuki.jpg" alt="小豆" class="main__item-image">
+                    <h2 class="main__item-title">小豆</h2>
+                    <p class="main__item-text">小さい豆</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-daizu.jpg" alt="大豆" class="main__item-image">
+                    <h2 class="main__item-title">大豆</h2>
+                    <p class="main__item-text">大いなる豆が語源</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-aodaizu.jpg" alt="青大豆" class="main__item-image">
+                    <h2 class="main__item-title">青大豆</h2>
+                    <p class="main__item-text">大豆とは異なる品種</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-kurosengoku.jpg" alt="黒千石" class="main__item-image">
+                    <h2 class="main__item-title">黒千石</h2>
+                    <p class="main__item-text">栽培が難しく幻の黒大豆</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-toramame.jpg" alt="とら豆" class="main__item-image">
+                    <h2 class="main__item-title">とら豆</h2>
+                    <p class="main__item-text">模様の入り具合が虎柄</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-kintokimame.jpg" alt="金時豆" class="main__item-image">
+                    <h2 class="main__item-title">金時豆</h2>
+                    <p class="main__item-text">十勝地方の幕別村で発見</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-kurimame.jpg" alt="くり豆" class="main__item-image">
+                    <h2 class="main__item-title">くり豆</h2>
+                    <p class="main__item-text">クリクリ豆</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-hanamame.jpg" alt="花豆" class="main__item-image">
+                    <h2 class="main__item-title">花豆</h2>
+                    <p class="main__item-text">大きな花をたくさん咲かせる</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-edamame.jpg" alt="えだ豆" class="main__item-image">
+                    <h2 class="main__item-title">えだ豆</h2>
+                    <p class="main__item-text">真夏の恋人ずんだもん</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-yudekata.jpg" alt="豆のゆで方" class="main__item-image">
+                    <h2 class="main__item-title">豆のゆで方</h2>
+                    <p class="main__item-text">「茹」の語源は「たべる」である</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-mamenochikara.jpg" alt="豆の力" class="main__item-image">
+                    <h2 class="main__item-title">豆の力</h2>
+                    <p class="main__item-text">豆の語源は魔滅（まめ）</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-sekainomame.jpg" alt="世界の豆" class="main__item-image">
+                    <h2 class="main__item-title">世界の豆</h2>
+                    <p class="main__item-text">Mr.ビーンズ</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-about.jpg" alt="このサイトについて" class="main__item-image">
+                    <h2 class="main__item-title">このサイトについて</h2>
+                    <p class="main__item-text">お豆の知識だよ！</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-sekainomame.jpg" alt="世界の豆" class="main__item-image">
+                    <h2 class="main__item-title">世界の豆</h2>
+                    <p class="main__item-text">Mr.ビーンズ</p>
+                </a>
+            </div>
+            <div class="main__item">
+                <a href="azuki.html" class="main__item-link">
+                    <img src="images/mame-about.jpg" alt="このサイトについて" class="main__item-image">
+                    <h2 class="main__item-title">このサイトについて</h2>
+                    <p class="main__item-text">お豆の知識だよ！</p>
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <nav class="footer__nav">
+                <div id="footer-navigation" class="footer__menu">
+                    <footer-navigation-template></footer-navigation-template>
+                </div>
+                <div id="copyright" class="footer__copyright">
+                    <copyright-template></copyright-template>
+                </div>
+            </nav>
+        </footer>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/template.js"></script>
+</body>
+
+</html>

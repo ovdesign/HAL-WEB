@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* 基本レイアウト
+------------------------------------- */
+.wrapper {
+  width: 100%;
+}
+
+/* ヘッダー
+------------------------------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header__title {
+  width: 20%;
+}
+.header__navigation {
+  width: 80%;
+}
+.header__nav-link {
+  font-size: 1.6rem;
+}
+
+/* フッター
+------------------------------------- */
+.footer__nav-list {
+  width: 50%;
+  font-size: 1.4rem;
+}
+
+/* メインコンテンツエリア
+------------------------------------- */
+.main__item {
+  width: calc((100% - 4.8rem) / 3);
+}
+
+/* -------------------------------------
+secondページ
+------------------------------------- */
+/* コンテンツラッパー */
+.content {
+  width: 100%;
+}
