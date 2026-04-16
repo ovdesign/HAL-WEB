@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap");
+
+/*///////////////////////////////////////////////////
+グローバル設定
+///////////////////////////////////////////////////*/
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Serif JP", serif;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.container {
+  margin-inline-start: 30rem;
+}
+
+/* 画像スクロールアップフェイド //////////*/
+.fade {
+  animation: fadeIn linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    clip-path: inset(10%);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0%);
+  }
+}
+
+/*///////////////////////////////////////////////////
+ PCレイアウト設定
+///////////////////////////////////////////////////*/
+/*---------------------
+ヘッダーエリア
+---------------------*/
+
+/* ナビゲーション //////////*/
+
+/*---------------------
+containerエリア
+---------------------*/
+/* 背景動画設定 //////////*/
+
+/* Featureエリア  //////////*/
+
+/* itemエリア //////////*/
+
+/* Aboutエリア //////////*/
+
+/* Accessエリア //////////*/
+
+/*---------------------
+フッターエリア
+---------------------*/
+
+/*---------------------
+トップへ戻るボタン 
+---------------------*/
+
+/*///////////////////////////////////////////////////
+レスポンシブ設定 960px以下
+///////////////////////////////////////////////////*/
+
+/*---------------------
+  ヘッダーエリア
+  ---------------------*/
+
+/* トグルメニュー //////////*/
+#toggle-nav {
+  display: none;
+}
+#toggle-nav:checked + .header__nav-toggle .header__nav-toggle-dot {
+  background: #ff74ab;
+}
+#toggle-nav:checked
+  + .header__nav-toggle
+  .header__nav-toggle-dot:nth-of-type(1) {
+  margin-block-start: 1.2rem;
+}
+#toggle-nav:checked
+  + .header__nav-toggle
+  .header__nav-toggle-dot:nth-of-type(2) {
+  margin-block-start: -2rem;
+}
+#toggle-nav:checked ~ .navigation {
+  opacity: 1;
+  visibility: visible;
+}
+.header__nav-toggle {
+  position: absolute;
+  z-index: 10;
+  top: 32%;
+  right: 0;
+  width: 32px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.header__nav-toggle-dot {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff74ab;
+  transition: 0.5s;
+}
+.header__nav-toggle-dot:nth-of-type(2) {
+  margin-block: 0.4rem;
+}
+
+/* ナビゲーション＆背景 //////////*/
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+  z-index: 9;
+}
+.navigation__main {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.header__nav-item {
+  margin-block-end: 1rem;
+  font-size: 2rem;
+}
+.header__nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+.header__nav-link:hover {
+  color: #fff;
+}
+.navigation__sns {
+  display: flex;
+  margin-top: 2rem;
+}
+.header__sns-item {
+  margin-inline: 1rem;
+  font-size: 2rem;
+}
+.header__sns-link {
+  color: #fff;
+  text-decoration: none;
+}
+.header__sns-link:hover {
+  color: #fff;
+}
+
+/*---------------------
+  containerエリア
+  ---------------------*/
+/* Feature エリア（スマホ） //////////*/
+
+/* 最後の2つも margin を付ける（揃える場合） */
+
+/* 最後の1つは margin 0 にしたい場合 */
+
+/* Itemエリア //////////*/
+
+/* Aboutエリア //////////*/
+
+/*---------------------
+  フッターーエリア
+  ---------------------*/
