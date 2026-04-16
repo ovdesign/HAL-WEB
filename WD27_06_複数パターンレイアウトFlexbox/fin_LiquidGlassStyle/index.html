@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>Flexbox サンプル</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header liquid-glass-card">
+        <div class="header__body">
+            <h1 class="header__logo">
+                <a href="index.html" class="header__logo-link">FLEXBOX</a>
+            </h1>
+            <nav class="header__nav">
+                <input type="checkbox" id="toggle-nav">
+                <label for="toggle-nav" class="toggle">
+                    <div class="toggle-item"></div>
+                    <div class="toggle-item"></div>
+                </label>
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#" class="nav__link">HOME</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">GALLERY</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">ABOUT</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Liquid Glass Style -->
+            <svg width="0" height="0" style="position: absolute;">
+                <defs>
+                    <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.008 0.008" numOctaves="2" seed="92" result="noise" />
+                        <feGaussianBlur in="noise" stdDeviation="2" result="blurred" />
+                        <feDisplacementMap in="SourceGraphic" in2="blurred" scale="150" xChannelSelector="R" yChannelSelector="G" />
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+    </header>
+
+    <div class="mainvisual"></div>
+
+    <section class="layout-2column">
+        <div class="layout-2column__inner">
+            <h2 class="layout-2column__title">STYLE 2column</h2>
+            <div class="layout-2column__body">
+                <div class="layout-2column__item">
+                    <img src="images/image01.jpg" alt="写真" class="layout-2column__image">
+                    <h3 class="layout-2column__heading">FLEXBOX</h3>
+                    <p class="layout-2column__text">過去への旅行: 過去への時間旅行は、現在の時点より前の時間へと移動することを指します。この場合、過去の出来事を観察するだけでなく、それに影響を与えることも可能とされています。ただし、過去に介入することが時間の連鎖的な変化を引き起こし、時間パラドックスと呼ばれる矛盾を引き起こす可能性があるとされています。</p>
+                </div>
+                <div class="layout-2column__item">
+                    <img src="images/image02.jpg" alt="写真" class="layout-2column__image">
+                    <h3 class="layout-2column__heading">FLEXBOX</h3>
+                    <p class="layout-2column__text">未来への旅行: 未来への時間旅行は、現在の時点より後の時間へと移動することを指します。これにより、未来の出来事を知ることや体験することが可能になります。ただし、未来に旅行することが過去の出来事に影響を与えることは一般的には考えられておらず、未来は確定しているわけではないため、予測に基づいた推測や可能性の範囲内での想像として扱われることが一般的です。</p>
+                </div>
+                <div class="layout-2column__item">
+                    <img src="images/image03.jpg" alt="写真" class="layout-2column__image">
+                    <h3 class="layout-2column__heading">FLEXBOX</h3>
+                    <p class="layout-2column__text">過去への旅行: 過去への時間旅行は、現在の時点より前の時間へと移動することを指します。この場合、過去の出来事を観察するだけでなく、それに影響を与えることも可能とされています。ただし、過去に介入することが時間の連鎖的な変化を引き起こし、時間パラドックスと呼ばれる矛盾を引き起こす可能性があるとされています。</p>
+                </div>
+                <div class="layout-2column__item">
+                    <img src="images/image04.jpg" alt="写真" class="layout-2column__image">
+                    <h3 class="layout-2column__heading">FLEXBOX</h3>
+                    <p class="layout-2column__text">未来への旅行: 未来への時間旅行は、現在の時点より後の時間へと移動することを指します。これにより、未来の出来事を知ることや体験することが可能になります。ただし、未来に旅行することが過去の出来事に影響を与えることは一般的には考えられておらず、未来は確定しているわけではないため、予測に基づいた推測や可能性の範囲内での想像として扱われることが一般的です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="layout-3column">
+        <div class="layout-3column__inner">
+            <h2 class="layout-3column__title">STYLE 3column</h2>
+            <div class="layout-3column__body">
+                <div class="layout-3column__item">
+                    <img src="images/image01.jpg" alt="写真" class="layout-3column__image">
+                    <h3 class="layout-3column__heading">FLEXBOX</h3>
+                    <p class="layout-3column__text">時間旅行とは、過去や未来に意識的に移動することを指す概念です。つまり、ある時点から別の時点へと時間的な距離を移動することです。なお、現実の科学では、時間旅行の実現性は不明です。まだ理論的な議論や仮説の段階に留まっており、実際に時間旅行を行うための確固たる証拠や方法は確立されていません。</p>
+                </div>
+                <div class="layout-3column__item">
+                    <img src="images/image02.jpg" alt="写真" class="layout-3column__image">
+                    <h3 class="layout-3column__heading">FLEXBOX</h3>
+                    <p class="layout-3column__text">時間旅行とは、過去や未来に意識的に移動することを指す概念です。つまり、ある時点から別の時点へと時間的な距離を移動することです。なお、現実の科学では、時間旅行の実現性は不明です。まだ理論的な議論や仮説の段階に留まっており、実際に時間旅行を行うための確固たる証拠や方法は確立されていません。</p>
+                </div>
+                <div class="layout-3column__item">
+                    <img src="images/image03.jpg" alt="写真" class="layout-3column__image">
+                    <h3 class="layout-3column__heading">FLEXBOX</h3>
+                    <p class="layout-3column__text">時間旅行とは、過去や未来に意識的に移動することを指す概念です。つまり、ある時点から別の時点へと時間的な距離を移動することです。なお、現実の科学では、時間旅行の実現性は不明です。まだ理論的な議論や仮説の段階に留まっており、実際に時間旅行を行うための確固たる証拠や方法は確立されていません。</p>
+                </div>
+                <div class="layout-3column__item">
+                    <img src="images/image04.jpg" alt="写真" class="layout-3column__image">
+                    <h3 class="layout-3column__heading">FLEXBOX</h3>
+                    <p class="layout-3column__text">時間旅行とは、過去や未来に意識的に移動することを指す概念です。つまり、ある時点から別の時点へと時間的な距離を移動することです。なお、現実の科学では、時間旅行の実現性は不明です。まだ理論的な議論や仮説の段階に留まっており、実際に時間旅行を行うための確固たる証拠や方法は確立されていません。</p>
+                </div>
+                <div class="layout-3column__item">
+                    <img src="images/image05.jpg" alt="写真" class="layout-3column__image">
+                    <h3 class="layout-3column__heading">FLEXBOX</h3>
+                    <p class="layout-3column__text">時間旅行とは、過去や未来に意識的に移動することを指す概念です。つまり、ある時点から別の時点へと時間的な距離を移動することです。なお、現実の科学では、時間旅行の実現性は不明です。まだ理論的な議論や仮説の段階に留まっており、実際に時間旅行を行うための確固たる証拠や方法は確立されていません。</p>
+                </div>
+                <div class="layout-3column__item">
+                    <img src="images/image06.jpg" alt="写真" class="layout-3column__image">
+                    <h3 class="layout-3column__heading">FLEXBOX</h3>
+                    <p class="layout-3column__text">時間旅行とは、過去や未来に意識的に移動することを指す概念です。つまり、ある時点から別の時点へと時間的な距離を移動することです。なお、現実の科学では、時間旅行の実現性は不明です。まだ理論的な議論や仮説の段階に留まっており、実際に時間旅行を行うための確固たる証拠や方法は確立されていません。</p>
+                </div>
+                <div class="layout-3column__item">
+                    <img src="images/image07.jpg" alt="写真" class="layout-3column__image">
+                    <h3 class="layout-3column__heading">FLEXBOX</h3>
+                    <p class="layout-3column__text">時間旅行とは、過去や未来に意識的に移動することを指す概念です。つまり、ある時点から別の時点へと時間的な距離を移動することです。なお、現実の科学では、時間旅行の実現性は不明です。まだ理論的な議論や仮説の段階に留まっており、実際に時間旅行を行うための確固たる証拠や方法は確立されていません。</p>
+                </div>
+                <div class="layout-3column__item">
+                    <img src="images/image08.jpg" alt="写真" class="layout-3column__image">
+                    <h3 class="layout-3column__heading">FLEXBOX</h3>
+                    <p class="layout-3column__text">時間旅行とは、過去や未来に意識的に移動することを指す概念です。つまり、ある時点から別の時点へと時間的な距離を移動することです。なお、現実の科学では、時間旅行の実現性は不明です。まだ理論的な議論や仮説の段階に留まっており、実際に時間旅行を行うための確固たる証拠や方法は確立されていません。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="layout-mix">
+        <div class="layout-mix__inner">
+            <h2 class="layout-mix__title">STYLE MIX</h2>
+            <div class="layout-mix__item">
+                <div class="layout-mix__img">
+                    <img src="images/image01.jpg" alt="写真" class="layout-mix__image">
+                </div>
+                <div class="layout-mix__txt">
+                    <h3 class="layout-mix__heading">FLEXBOX</h3>
+                    <p class="layout-mix__text">過去への旅行: 過去への時間旅行は、現在の時点より前の時間へと移動することを指します。この場合、過去の出来事を観察するだけでなく、それに影響を与えることも可能とされています。ただし、過去に介入することが時間の連鎖的な変化を引き起こし、時間パラドックスと呼ばれる矛盾を引き起こす可能性があるとされています。</p>
+                </div>
+            </div>
+            <div class="layout-mix__item">
+                <div class="layout-mix__img">
+                    <img src="images/image02.jpg" alt="写真" class="layout-mix__image">
+                </div>
+                <div class="layout-mix__txt">
+                    <h3 class="layout-mix__heading">FLEXBOX</h3>
+                    <p class="layout-mix__text">過去への旅行: 過去への時間旅行は、現在の時点より前の時間へと移動することを指します。この場合、過去の出来事を観察するだけでなく、それに影響を与えることも可能とされています。ただし、過去に介入することが時間の連鎖的な変化を引き起こし、時間パラドックスと呼ばれる矛盾を引き起こす可能性があるとされています。</p>
+                </div>
+            </div>
+            <div class="layout-mix__item">
+                <div class="layout-mix__img">
+                    <img src="images/image03.jpg" alt="写真" class="layout-mix__image">
+                </div>
+                <div class="layout-mix__txt">
+                    <h3 class="layout-mix__heading">FLEXBOX</h3>
+                    <p class="layout-mix__text">過去への旅行: 過去への時間旅行は、現在の時点より前の時間へと移動することを指します。この場合、過去の出来事を観察するだけでなく、それに影響を与えることも可能とされています。ただし、過去に介入することが時間の連鎖的な変化を引き起こし、時間パラドックスと呼ばれる矛盾を引き起こす可能性があるとされています。</p>
+                </div>
+            </div>
+            <div class="layout-mix__item">
+                <div class="layout-mix__img">
+                    <img src="images/image04.jpg" alt="写真" class="layout-mix__image">
+                </div>
+                <div class="layout-mix__txt">
+                    <h3 class="layout-mix__heading">FLEXBOX</h3>
+                    <p class="layout-mix__text">過去への旅行: 過去への時間旅行は、現在の時点より前の時間へと移動することを指します。この場合、過去の出来事を観察するだけでなく、それに影響を与えることも可能とされています。ただし、過去に介入することが時間の連鎖的な変化を引き起こし、時間パラドックスと呼ばれる矛盾を引き起こす可能性があるとされています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer__copyright">© 2025 KOIZUMI</p>
+    </footer>
+
+</body>
+
+</html>
