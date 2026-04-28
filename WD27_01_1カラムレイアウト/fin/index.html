@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 
 <head>
@@ -12,10 +13,11 @@
 <body>
     <div class="wrapper">
         <header class="header">
+
             <h1 class="header__title">kagamirock used select shop</h1>
 
             <!-- トグルボタン -->
-            <button class="header__toggle">
+            <button class="header__toggle" aria-label="メニューを開閉">
                 <span class="header__toggle-bar"></span>
                 <span class="header__toggle-bar"></span>
                 <span class="header__toggle-bar"></span>
@@ -23,44 +25,67 @@
 
             <!-- ナビゲーション -->
             <nav class="header__navigation">
-                <ul class="header__navigation-list">
-                    <li class="header__navigation-item"><a href="#" class="header__navigation-link">HOME</a></li>
-                    <li class="header__navigation-item"><a href="#" class="header__navigation-link">COLLECTIONS</a></li>
-                    <li class="header__navigation-item"><a href="#" class="header__navigation-link">BLOG</a></li>
-                    <li class="header__navigation-item"><a href="#" class="header__navigation-link">CONTACT</a></li>
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a class="header__nav-link" href="#">HOME</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="#">COLLECTIONS</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="#">BLOG</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="#">CONTACT</a></li>
                 </ul>
             </nav>
+
         </header>
+
 
         <main class="main">
             <article class="main__article">
                 <h2 class="main__article-title">kagamirockについて</h2>
                 <img src="images/pic_01.jpg" alt="kagamirockのイメージ画像" class="main__article-image">
-                <p class="main__article-text">お店の名前はkagamirock(カガミロック)と申します。鏡のない時代ツルツルピカピカな姿が映る岩があったそうです。わざわざおしゃれを楽しむためにその岩を目指して人々は出かけたと言われています。「幻の岩、鏡岩」わざわざオシャレを楽しむために足を運んでいただきたい！そんな願いを込めてみました。</p>
+                <p class="main__article-text">
+                    お店の名前はkagamirock(カガミロック)と申します。鏡のない時代ツルツルピカピカな姿が映る岩があったそうです。わざわざおしゃれを楽しむためにその岩を目指して人々は出かけたと言われています。「幻の岩、鏡岩」わざわざオシャレを楽しむために足を運んでいただきたい！そんな願いを込めてみました。
+                </p>
             </article>
             <article class="main__article">
                 <h2 class="main__article-title">2015年SSのサンローラン</h2>
-                <img src="images/pic_02.jpg" alt="2015年SSのサンローラン" class="main__article-image">
-                <p class="main__article-text">こちらは2015年SSのサンローラン。顧客様でほぼ完売の大変人気のあったエナメルストラップシューズ。エディが退任してしまったのでエディデザインのサンローランはこれから貴重ですね。</p>
+                <img src="images/pic_02.jpg" alt="2015年SSのサンローランのイメージ画像" class="main__article-image">
+                <p class="main__article-text">
+                    こちらは2015年SSのサンローラン。顧客様でほぼ完売の大変人気のあったエナメルストラップシューズ。エディが退任してしまったのでエディデザインのサンローランはこれから貴重ですね。
+                </p>
             </article>
             <article class="main__article">
                 <h2 class="main__article-title">フランスから着物リメイク</h2>
-                <img src="images/pic_03.jpg" alt="フランスから着物リメイク" class="main__article-image">
-                <p class="main__article-text">フランスから着物リメイクのブランドwamonoの小物達が到着致しました。私達がフランスのモノってなんでもすてき！！と思うように、フランスの方達も日本の着物生地をとても気に入ってくれます。そしてフランス人が着物をリメイクするとこんな素敵なバックに大変身しちゃいます。なんてセンスがいいんでしょう。このバックほしい・・・でもすべて一点モノなのです。がまんがまん。ちなみにwamonoは日本ではうちでしか取り扱ってませんよ〜急いで！！</p>
+                <img src="images/pic_03.jpg" alt="フランスから着物リメイクのイメージ画像" class="main__article-image">
+                <p class="main__article-text">
+                    フランスから着物リメイクのブランドwamonoの小物達が到着致しました。私達がフランスのモノってなんでもすてき！！と思うように、フランスの方達も日本の着物生地をとても気に入ってくれます。そしてフランス人が着物をリメイクするとこんな素敵なバックに大変身しちゃいます。なんてセンスがいいんでしょう。このバックほしい・・・でもすべて一点モノなのです。がまんがまん。ちなみにwamonoは日本ではうちでしか取り扱ってませんよ〜急いで！！
+                </p>
             </article>
         </main>
 
         <footer class="footer">
+            <address class="footer__address">
+                <p class="footer__address-name">kagamirock used select shop</p>
+                <p class="footer__address-text">
+                    東京都目黒区東山1-11-15<br>
+                    中目黒ARK-2 304号室<br>
+                    中目黒駅徒歩8分
+                </p>
+            </address>
+            <div class="footer__copyright">
+                <small>&copy; 2026 kagamirock</small>
+            </div>
+        </footer>
+
+        <!-- <footer class="footer">
             <div class="footer__address">
                 <span class="footer__address-name">kagamirock used select shop</span><br>
                 東京都目黒区東山1-11-15<br>
                 中目黒ARK-2 304号室<br>
-                中目黒駅徒歩8分
+                中目黒駅徒歩8分<br>
             </div>
             <div class="footer__copyright">
-                Copyright 2026 kagamirock
+                Copyright 2025 kagamirock
             </div>
-        </footer>
+        </footer> -->
+
     </div>
 
     <script>
