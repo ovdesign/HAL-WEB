@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
-/* カラーバリアブル（変数） 定義*/
+/* カラーバリアブル（変数）定義 */
 :root {
   --color-bg-dark: #333;
   --color-bg-dark-transparent: rgb(0 0 0 / 80%);
   --color-bg-light: #fff;
   --color-border: #ccc;
   --color-border-light: #eee;
-  --color-text-main: #333;
+  --color-text-main: #000;
   --color-text-sub: #aaa;
   --color-text-light: #fff;
   --color-accent: #e62f8b;
@@ -28,9 +28,7 @@ body {
 /* 外枠設定 */
 .wrapper {
   width: 960px;
-  /* margin: 0 auto; */
-  margin-block: 0;
-  margin-inline: auto;
+  margin: 0 auto;
   background-color: var(--color-bg-light);
 }
 
@@ -38,14 +36,13 @@ body {
 .header {
   width: 100%;
   height: 640px;
-  margin-block-start: 0;
-  margin-block-end: 10rem;
+  margin-block-end: 8rem;
   background-image: url(../images/header.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   border-block-end: solid 1px var(--color-border);
 }
-.header h1 {
+.header__title {
   visibility: hidden;
   height: 0;
 }
@@ -55,31 +52,29 @@ body {
   width: 100%;
   background-color: var(--color-bg-dark-transparent);
 }
-.header__navigation-list {
+.header__nav-list {
   display: flex;
   justify-content: space-between;
   margin: 0;
   padding: 0;
 }
-.header__navigation-item {
+.header__nav-item {
   width: 25%;
-  /* padding: 1rem 0; */
-  padding-block: 1rem;
+  padding: 1rem 0;
   font-size: 1.4rem;
   text-align: center;
   letter-spacing: 0.2rem;
   text-shadow: 2px 2px 2px var(--color-text-main);
 }
-.header__navigation-link {
+.header__nav-link {
   display: block;
-  color: var(--color-text-light);
+  color: var(--color-bg-light);
   transition: 0.2s;
 }
-.header__navigation-link:hover {
+.header__nav-link:hover {
   color: var(--color-text-sub);
 }
-
-/* トグルボタン（初期設定は非表示） */
+/* トグルボタン（初期は非表示） */
 .header__toggle {
   display: none;
   width: 40px;
@@ -89,7 +84,7 @@ body {
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 1001; /*ナビの上に来るように*/
+  z-index: 1001; /* ナビの上に来るように */
 }
 .header__toggle-bar {
   display: block;
@@ -100,7 +95,7 @@ body {
   transition: 0.3s;
 }
 
-/* メインコンテンツエリア */
+/* メインコンテンツ */
 .main {
   width: 100%;
   padding-inline: 10%;
@@ -115,16 +110,16 @@ body {
   font-weight: normal;
   color: var(--color-accent);
 }
-.main__article-image {
-  width: 100%;
-  margin-block-end: 1.6rem;
-}
 .main__article-text {
   font-size: 1.6rem;
   line-height: 1.75;
 }
+.main__article-image {
+  width: 100%;
+  margin-block-end: 1.6rem;
+}
 
-/* フッターエリア */
+/* フッター */
 .footer {
   display: flex;
   flex-direction: column;
@@ -132,21 +127,25 @@ body {
   align-items: center;
   width: 100%;
   height: 200px;
+  line-height: 1.6;
   border-block-start: solid 1px var(--color-border-light);
 }
 .footer__address {
   margin-block-end: 1rem;
-  font-size: 1.4rem;
   text-align: center;
-  line-height: 1.6;
 }
 .footer__address-name {
   font-size: 2.4rem;
   font-weight: bold;
+  font-style: normal;
   color: var(--color-accent);
 }
-.footer__copyright {
+.footer__address-text {
   font-size: 1.4rem;
+  font-style: normal;
+}
+.footer__copyright {
+  font-size: 1.6rem;
 }
 
 /* Media Query スマホ設定
@@ -154,9 +153,10 @@ body {
 @media (width < 960px) {
   .wrapper {
     width: 100%;
+    margin: 0 auto;
   }
 
-  /* ヘッダーエリア */
+  /* ヘッダー */
   .header {
     height: 0;
     padding-block-start: 100%;
@@ -164,6 +164,7 @@ body {
     background-size: contain;
   }
 
+  /* トグルボタン表示 */
   .header__toggle {
     display: flex;
     position: fixed;
@@ -178,6 +179,7 @@ body {
     right: -100%;
     width: 50%;
     height: 100vh;
+    background-color: var(--color-bg-dark-transparent);
     padding-block-start: 10rem;
     transition: 0.6s;
     z-index: 1000;
@@ -188,11 +190,11 @@ body {
     right: 0;
   }
 
-  /* ナビメニュー縦並び */
-  .header__navigation-list {
+  /* ナビメニュー縦並びに */
+  .header__nav-list {
     flex-direction: column;
   }
-  .header__navigation-item {
+  .header__nav-item {
     width: 100%;
     text-align: center;
     padding-block: 2rem;
@@ -209,19 +211,18 @@ body {
     transform: translateY(-13px) rotate(-45deg);
   }
 
-  /* フッターエリア */
+  /* フッター */
   .footer {
     width: 100%;
     background-color: var(--color-bg-dark);
   }
-  .footer__address {
-    font-size: 1.2rem;
+  .footer__address-text {
+    font-size: 1.4rem;
     color: var(--color-text-light);
-    text-shadow: 1px 1px 1px var(--color-bg-dark);
   }
   .footer__copyright {
-    font-size: 1.2rem;
-    color: var(--color-text-light);
+    font-size: 1.6rem;
+    color: var(--color-bg-light);
     text-shadow: 1px 1px 1px var(--color-bg-dark);
   }
 }
