@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>十勝豆知識</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style-sp.css">
+    <link rel="stylesheet" href="css/style-tb.css" media="(600px <= width)">
+    <link rel="stylesheet" href="css/style-pc.css" media="(960px <= width)">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="nav" class="header">
+            <div class="header__logo">
+                <a href="index.html" class="header__logo-link">
+                    <h1>
+                        <img src="images/site-logo.svg" alt="十勝豆知識" class="header__logo-image">
+                    </h1>
+                </a>
+            </div>
+
+            <nav class="header__nav">
+                <input type="checkbox" id="toggle-nav" class="header__nav-checkbox">
+                <label for="toggle-nav" class="header__nav-toggle">
+                    <div class="header__nav-toggle-dot"></div>
+                    <div class="header__nav-toggle-dot"></div>
+                </label>
+
+                <div id="main-navigation" class="header__menu">
+                    <header-navigation-template></header-navigation-template>
+                </div>
+            </nav>
+        </header>
+
+        <div class="main-visual__second-page">
+            <img src="images/top-image005.jpg" alt="豆資料館" class="main-visual__second-page-image">
+        </div>
+
+        <div class="heading">
+            <h2 class="heading__title"><img src="images/icon.png" class="heading__image">小豆</h2>
+        </div>
+
+        <article class="content">
+            <div class="content__text">
+                <p class="content__text-lead">「あずき」または「しょうず」とも読みます。小豆は神話時代から親しまれてきた食材で、『古事記』や『日本書紀』にもその記述があり,古代から日本では赤い色には邪気を追い払う力があるとされ、 小豆は魔除けとして行事や儀式などに供されてきました。おもに餡の原料で和菓子や赤飯、汁粉などに使用されます。全国の約70％は北海道産で北海道産小豆の約半分が十勝で作られています。</p>
+
+                <h3 class="content__text-title"><img src="images/icon.png" class="content__text-image">小豆の栄養</h3>
+                <p class="content__text-sentence">小豆には顕著な利尿作用があることが、昔から知られています。これは、小豆の外皮に利尿や便通を促進するサポニンという成分が含まれているからです。サポニンは油脂を溶かす性質から脂肪やコレステロールを取り除く作用があり、抗酸化作用も認められています。ビタミンB1の豊富な小豆は、筋肉の中に疲労物質がたまることを防ぐ働きがあり、筋肉を使って疲れたとき、筋肉痛や肩こりのあるとき、小豆を食べれば症状が改善されると言われています。</p>
+
+                <h3 class="content__text-title"><img src="images/icon.png" class="content__text-image">北海道の小豆</h3>
+                <p class="content__text-sentence">流通している北海道産小豆は普通小豆、大納言、白小豆の3つの種類があり、品種ごとにどの種類に属するのか決まっています。普通小豆と大納言はいずれも赤い小豆ですが、大納言に分類されているのは普通小豆に比べて大粒の品種です。白小豆は粒の色が黄白色のもので、流通量はきわめて限られています。最近では沖縄地方でよく生産されている黒あずきも生産されるようになりました。</p>
+            </div>
+            <div class="content__visual">
+                <img src="images/mame-azuki.jpg" alt="小豆" class="content__image">
+                <img src="images/hana-azuki.jpg" alt="小豆の花" class="content__image">
+            </div>
+        </article>
+
+        <footer class="footer">
+            <nav class="footer__nav">
+                <div id="footer-navigation" class="footer__menu">
+                    <footer-navigation-template></footer-navigation-template>
+                </div>
+                <div id="copyright" class="footer__copyright">
+                    <copyright-template></copyright-template>
+                </div>
+            </nav>
+        </footer>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script src="js/template.js"></script>
+</body>
+
+</html>

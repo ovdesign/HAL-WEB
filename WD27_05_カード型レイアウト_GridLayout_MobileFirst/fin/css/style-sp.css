@@ -1,0 +1,296 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%; /* 10px=1rem */
+}
+
+/* 基本レイアウト（スマホ時は横幅100%）
+------------------------------------- */
+body {
+  margin-block: 2rem;
+  margin-inline: 1rem;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+.wrapper {
+  width: 100%;
+}
+
+/* ヘッダー
+------------------------------------- */
+.header {
+  display: flex;
+  margin-block-end: 2rem;
+}
+.header__logo {
+  width: 120px;
+}
+.header__logo-image {
+  width: 100%;
+}
+
+/* checkboxを非表示 */
+#toggle-nav {
+  display: none;
+}
+
+/* ナビゲーション共通（メニュー）
+------------------------------------- */
+.header__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+.header__nav {
+  width: 100%;
+}
+.header__nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__nav-link {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 4;
+  text-decoration: none;
+  color: #86b12e;
+  transition: all 0.2s;
+}
+.header__nav-link:hover {
+  color: #688924;
+}
+
+/* トグルメニュー
+------------------------------------- */
+/* .header__nav-checkbox:checkedの場合
+~以下のclassが提要される 
+一般兄弟セレクタ (General Sibling Combinator) */
+.header__nav-checkbox:checked ~ .header__nav-toggle .header__nav-toggle-dot {
+  background-color: #86b12e;
+}
+.header__nav-checkbox:checked
+  ~ .header__nav-toggle
+  .header__nav-toggle-dot:nth-of-type(1) {
+  margin-block-start: 0.2rem;
+}
+.header__nav-checkbox:checked
+  ~ .header__nav-toggle
+  .header__nav-toggle-dot:nth-of-type(2) {
+  margin-block-start: -0.2rem;
+}
+#toggle-nav:checked ~ .header__menu {
+  opacity: 1;
+  visibility: visible;
+}
+.header__nav-toggle {
+  position: fixed;
+  top: 16px;
+  right: 0;
+  width: 21px;
+  height: 14px;
+  z-index: 20;
+}
+.header__nav-toggle-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #86b12e;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.header__nav-toggle-dot:nth-of-type(2) {
+  margin-block: 0.4rem;
+}
+
+/* フッター
+------------------------------------- */
+.footer {
+  padding-block: 2rem;
+  border-block-start: dashed 1px #86b12e;
+}
+.footer__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-block-end: 1rem;
+}
+.footer__nav-link {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #86b12e;
+  transition: all 0.2s;
+}
+.footer__nav-link:hover {
+  color: #688924;
+}
+.footer__copyright {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #86b12e;
+}
+
+/* スライダーエリア
+------------------------------------- */
+.slider__outer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-block-end: 3rem;
+  margin-inline: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.slider__inner {
+  position: absolute;
+  width: 100%;
+  top: 0; /* 画像の位置を完全に重ねるために追加 */
+  left: 0; /* 画像の位置を完全に重ねるために追加 */
+}
+
+.slider__image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* --- Vue 3 アニメーション設定 --- */
+
+/* 変化にかかる時間（4秒だと少し長いかもしれないので、フワッとさせるなら1.5秒〜2秒ほどでも綺麗です） */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1.5s ease; /* all より opacity 限定にするのがベター */
+}
+
+/* Vue 2 の「.fade-enter」を「.fade-enter-from」に変更しました */
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+/* メインコンテンツエリア（スマホ：2列）
+------------------------------------- */
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+  margin-block-end: 3rem;
+}
+.main__item {
+  width: 100%;
+}
+.main__item-image {
+  width: 100%;
+  margin-block-end: 1rem;
+  border-radius: 1rem;
+  transition: all 0.5s;
+}
+.main__item-image:hover {
+  opacity: 0.7;
+}
+.main__item-title {
+  margin-block-end: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.main__item-text {
+  font-size: 1.2rem;
+}
+.main__item-link {
+  display: block;
+  color: #86b12e;
+  transition: all 0.5s;
+}
+.main__item-link:hover {
+  color: #688924;
+}
+
+/* -------------------------------------
+secondページ（スマホ：縦並び1列）
+------------------------------------- */
+.main-visual__second-page {
+  margin-block-end: 4rem;
+}
+.main-visual__second-page-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.heading {
+  margin-block-end: 1rem;
+}
+.heading__title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #86b12e;
+}
+.heading__image {
+  width: 40px;
+  margin-inline-end: 0.5rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  width: 100%;
+  gap: 40px;
+}
+.content__visual {
+  width: 98%;
+  grid-column: 1;
+  grid-row: 1; /* 写真を上 */
+}
+.content__text {
+  width: 98%;
+  grid-column: 1;
+  grid-row: 2; /* テキストを下 */
+}
+.content__image {
+  width: 100%;
+  height: auto;
+  margin-block-end: 2rem;
+  border-radius: 10%;
+}
+.content__text-title {
+  margin-block-end: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #86b12e;
+}
+.content__text-image {
+  width: 30px;
+  margin-inline-end: 0.5rem;
+}
+.content__text-sentence {
+  margin-block-end: 4rem;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  letter-spacing: 0.05rem;
+  text-align: justify;
+  color: #5d5d5d;
+}
+.content__text-lead {
+  margin-block-end: 4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.75;
+  letter-spacing: 0.05rem;
+  text-align: justify;
+  color: #5d5d5d;
+}

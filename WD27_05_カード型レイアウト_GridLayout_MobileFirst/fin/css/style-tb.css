@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/* ヘッダー：横並びに変更 */
+.header {
+  justify-content: space-between;
+}
+.header__title {
+  width: 20%;
+}
+.header__navigation {
+  width: 80%;
+}
+
+/* ナビゲーションの表示修正：スマホ用メニューの解除
+-------------------------------------------------- */
+/* スマホ用のトグルボタン（ドット）を非表示にする */
+.header__nav-toggle {
+  display: none;
+}
+/* 全画面に広がっていたメニューを通常の配置に戻して常に表示する */
+.header__menu {
+  position: static;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: transparent;
+  opacity: 1;
+  visibility: visible;
+}
+/* ナビゲーションのリンクを縦並びから横並び（またはタブレット用の並び）に変更 */
+.header__nav-list {
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+.header__nav-link {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* フッター調整
+------------------------------------- */
+.footer__nav-list {
+  width: 50%;
+  font-size: 1.4rem;
+}
+
+/* メインコンテンツエリア：3列に変更
+------------------------------------- */
+.main {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* -------------------------------------
+secondページ：2列の横並びに変更（テキストが左、ビジュアルが右）
+------------------------------------- */
+.content {
+  grid-template-columns: 1fr 1fr;
+}
+.content__text {
+  grid-column: 1;
+  grid-row: 1;
+}
+.content__visual {
+  grid-column: 2;
+  grid-row: 1;
+}
