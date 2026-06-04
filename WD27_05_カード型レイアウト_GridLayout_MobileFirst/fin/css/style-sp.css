@@ -189,6 +189,9 @@ body {
   gap: 2.4rem;
   margin-block-end: 3rem;
 }
+.main__heading {
+  display: none;
+}
 .main__item {
   width: 100%;
 }
