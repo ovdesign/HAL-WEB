@@ -10,9 +10,11 @@ body {
   margin-block: 2rem;
   margin-inline: 1rem;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  background-color: #fff;
 }
 .wrapper {
   width: 100%;
+  background-color: #fff;
 }
 
 /* ヘッダー
@@ -154,14 +156,12 @@ body {
   border-radius: 1rem;
   overflow: hidden;
 }
-
 .slider__inner {
   position: absolute;
   width: 100%;
   top: 0; /* 画像の位置を完全に重ねるために追加 */
   left: 0; /* 画像の位置を完全に重ねるために追加 */
 }
-
 .slider__image {
   width: 100%;
   height: 400px;
@@ -169,14 +169,11 @@ body {
 }
 
 /* --- Vue 3 アニメーション設定 --- */
-
-/* 変化にかかる時間（4秒だと少し長いかもしれないので、フワッとさせるなら1.5秒〜2秒ほどでも綺麗です） */
+/* 変化にかかる時間（4秒だと少し長いかもしれないので、フワッとさせるなら1.5秒〜2秒ほどでも綺麗） */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 1.5s ease; /* all より opacity 限定にするのがベター */
 }
-
-/* Vue 2 の「.fade-enter」を「.fade-enter-from」に変更しました */
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
@@ -242,9 +239,16 @@ secondページ（スマホ：縦並び1列）
   font-weight: bold;
   color: #86b12e;
 }
-.heading__image {
-  width: 40px;
-  margin-inline-end: 0.5rem;
+.heading__title::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* 画像サイズ調整 */
+  height: 40px;
+  background-image: url("../images/icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 8px; /* 文字との間隔 */
+  vertical-align: bottom;
 }
 
 .content {
@@ -276,9 +280,16 @@ secondページ（スマホ：縦並び1列）
   font-weight: bold;
   color: #86b12e;
 }
-.content__text-image {
-  width: 30px;
-  margin-inline-end: 0.5rem;
+.content__text-title::before {
+  content: "";
+  display: inline-block;
+  width: 30px; /* サイズ調整 */
+  height: 30px;
+  background-image: url("../images/icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 6px;
+  vertical-align: bottom;
 }
 .content__text-sentence {
   margin-block-end: 4rem;

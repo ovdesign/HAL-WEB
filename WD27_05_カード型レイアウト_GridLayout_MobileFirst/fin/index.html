@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>十勝豆知識</title>
-    <script src="https://unpkg.com/vue@3.5.12/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3.5.12/dist/vue.global.js" defer></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style-sp.css">
     <!-- <link rel="stylesheet" href="css/style-tb.css" media="(600px <= width)">
@@ -38,7 +38,7 @@
             </nav>
         </header>
 
-        <div id="slider">
+        <section id="slider">
             <div class="slider__outer">
                 <transition-group name="fade">
                     <div class="slider__inner" v-for="(slide, idx) in slides" v-show="current_slide === idx" :key="slide.img">
@@ -46,7 +46,7 @@
                     </div>
                 </transition-group>
             </div>
-        </div>
+        </section>
 
         <section class="main">
             <h2 class="main__heading">豆の種類</h2><!-- display: none で非表示 -->
