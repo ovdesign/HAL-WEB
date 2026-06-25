@@ -4,10 +4,10 @@
 .header {
   justify-content: space-between;
 }
-.header__title {
-  width: 20%;
+.header__logo {
+  width: 15%;
 }
-.header__navigation {
+.header__nav {
   width: 80%;
 }
 
