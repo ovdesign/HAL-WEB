@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 html {
-  font-size: 62.5%; /* 10px=1rem */
+  font-size: 62.5%;
 }
 
 /* 基本レイアウト（スマホ時は横幅100%）
@@ -24,7 +24,7 @@ body {
   margin-block-end: 2rem;
 }
 .header__logo {
-  width: 25%;
+  width: 30%;
 }
 .header__logo-image {
   width: 100%;
@@ -134,7 +134,7 @@ body {
   font-weight: bold;
   line-height: 1.6;
   color: #86b12e;
-  transition: all 0.2s;
+  taransition: all 0.2s;
 }
 .footer__nav-link:hover {
   color: #688924;
@@ -159,20 +159,18 @@ body {
 .slider__inner {
   position: absolute;
   width: 100%;
-  top: 0; /* 画像の位置を完全に重ねるために追加 */
-  left: 0; /* 画像の位置を完全に重ねるために追加 */
+  top: 0; /*画像の位置を完全に重ねるため*/
+  left: 0;
 }
 .slider__image {
   width: 100%;
   height: 400px;
   object-fit: cover;
 }
-
-/* --- Vue 3 アニメーション設定 --- */
-/* 変化にかかる時間（4秒だと少し長いかもしれないので、フワッとさせるなら1.5秒〜2秒ほどでも綺麗） */
+/* アニメーション設定 */
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 1.5s ease; /* all より opacity 限定にするのがベター */
+  transition: opacity 1.5s ease;
 }
 .fade-enter-from,
 .fade-leave-to {
@@ -219,7 +217,7 @@ body {
 }
 
 /* -------------------------------------
-secondページ（スマホ：縦並び1列）
+secondページ：スマホ用縦並び１列
 ------------------------------------- */
 .main-visual__second-page {
   margin-block-end: 4rem;
@@ -242,37 +240,38 @@ secondページ（スマホ：縦並び1列）
 .heading__title::before {
   content: "";
   display: inline-block;
-  width: 40px; /* 画像サイズ調整 */
+  margin-inline-end: 0.8rem;
+  width: 40px;
   height: 40px;
   background-image: url("../images/icon.png");
   background-size: contain;
   background-repeat: no-repeat;
-  margin-right: 8px; /* 文字との間隔 */
   vertical-align: bottom;
 }
 
 .content {
   display: grid;
-  grid-template-columns: 1fr;
+  margin-block-end: 4rem;
+  grid-template-columns: repeat(1, 1fr);
   justify-items: center;
   width: 100%;
-  gap: 40px;
+  gap: 4rem;
 }
 .content__visual {
   width: 98%;
   grid-column: 1;
-  grid-row: 1; /* 写真を上 */
+  grid-row: 1;
 }
-.content__text {
-  width: 98%;
-  grid-column: 1;
-  grid-row: 2; /* テキストを下 */
-}
-.content__image {
+.content__visual-image {
   width: 100%;
   height: auto;
   margin-block-end: 2rem;
   border-radius: 10%;
+}
+.content__text {
+  width: 98%;
+  grid-column: 1;
+  grid-row: 2;
 }
 .content__text-title {
   margin-block-end: 0.5rem;
@@ -283,28 +282,29 @@ secondページ（スマホ：縦並び1列）
 .content__text-title::before {
   content: "";
   display: inline-block;
-  width: 30px; /* サイズ調整 */
+  margin-inline-end: 0.6rem;
+  width: 30px;
   height: 30px;
   background-image: url("../images/icon.png");
   background-size: contain;
   background-repeat: no-repeat;
-  margin-right: 6px;
   vertical-align: bottom;
 }
 .content__text-sentence {
   margin-block-end: 4rem;
   font-size: 1.6rem;
-  line-height: 1.75;
-  letter-spacing: 0.05rem;
+  line-height: 1.6;
   text-align: justify;
   color: #5d5d5d;
+}
+.content__text-sentence:last-child {
+  margin-block-end: 0;
 }
 .content__text-lead {
   margin-block-end: 4rem;
   font-size: 2rem;
   font-weight: bold;
-  line-height: 1.75;
-  letter-spacing: 0.05rem;
+  line-height: 1.6;
   text-align: justify;
   color: #5d5d5d;
 }

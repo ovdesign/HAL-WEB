@@ -10,14 +10,12 @@
 .header__nav {
   width: 80%;
 }
-
 /* ナビゲーションの表示修正：スマホ用メニューの解除
 -------------------------------------------------- */
-/* スマホ用のトグルボタン（ドット）を非表示にする */
+/* スマホ用のトグルボタンを非表示 */
 .header__nav-toggle {
   display: none;
 }
-/* 全画面に広がっていたメニューを通常の配置に戻して常に表示する */
 .header__menu {
   position: static;
   width: auto;
@@ -28,7 +26,6 @@
   opacity: 1;
   visibility: visible;
 }
-/* ナビゲーションのリンクを縦並びから横並び（またはタブレット用の並び）に変更 */
 .header__nav-list {
   flex-direction: row;
   justify-content: flex-end;
@@ -56,7 +53,8 @@
 secondページ：2列の横並びに変更（テキストが左、ビジュアルが右）
 ------------------------------------- */
 .content {
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: repeat(2, 1fr);
 }
 .content__text {
   grid-column: 1;
