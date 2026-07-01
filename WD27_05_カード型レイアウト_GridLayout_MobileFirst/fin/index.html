@@ -16,22 +16,18 @@
 
 <body>
     <div class="wrapper">
-        <header id="nav" class="header">
+        <header class="header">
             <div class="header__logo">
-                <a href="index.html" class="header__logo-link">
-                    <h1>
-                        <img src="images/site-logo.svg" alt="十勝豆知識" class="header__logo-image">
-                    </h1>
-                </a>
+                <h1>
+                    <a href="index.html" class="header__logo-link"><img src="images/site-logo.svg" alt="十勝豆知識" class="header__logo-image"></a>
+                </h1>
             </div>
-
             <nav class="header__nav">
                 <input type="checkbox" id="toggle-nav" class="header__nav-checkbox">
                 <label for="toggle-nav" class="header__nav-toggle">
                     <div class="header__nav-toggle-dot"></div>
                     <div class="header__nav-toggle-dot"></div>
                 </label>
-
                 <div id="main-navigation" class="header__menu">
                     <header-navigation-template></header-navigation-template>
                 </div>
@@ -48,9 +44,8 @@
             </div>
         </section>
 
-        <section class="main">
-            <h2 class="main__heading">豆の種類</h2><!-- display: none で非表示 -->
-
+        <main class="main">
+            <h2 class="main__heading">豆の種類</h2> <!--display:noneで非表示にする-->
             <div class="main__item">
                 <a href="azuki.html" class="main__item-link">
                     <img src="images/mame-kuromame.jpg" alt="黒大豆" class="main__item-image">
@@ -123,13 +118,6 @@
             </div>
             <div class="main__item">
                 <a href="azuki.html" class="main__item-link">
-                    <img src="images/mame-hanamame.jpg" alt="花豆" class="main__item-image">
-                    <h3 class="main__item-title">花豆</h3>
-                    <p class="main__item-text">大きな花をたくさん咲かせる</p>
-                </a>
-            </div>
-            <div class="main__item">
-                <a href="azuki.html" class="main__item-link">
                     <img src="images/mame-edamame.jpg" alt="えだ豆" class="main__item-image">
                     <h3 class="main__item-title">えだ豆</h3>
                     <p class="main__item-text">真夏の恋人ずんだもん</p>
@@ -152,32 +140,18 @@
             <div class="main__item">
                 <a href="azuki.html" class="main__item-link">
                     <img src="images/mame-sekainomame.jpg" alt="世界の豆" class="main__item-image">
-                    <h2 class="main__item-title">世界の豆</h2>
+                    <h3 class="main__item-title">世界の豆</h3>
                     <p class="main__item-text">Mr.ビーンズ</p>
                 </a>
             </div>
             <div class="main__item">
                 <a href="azuki.html" class="main__item-link">
                     <img src="images/mame-about.jpg" alt="このサイトについて" class="main__item-image">
-                    <h2 class="main__item-title">このサイトについて</h2>
+                    <h3 class="main__item-title">このサイトについて</h3>
                     <p class="main__item-text">お豆の知識だよ！</p>
                 </a>
             </div>
-            <div class="main__item">
-                <a href="azuki.html" class="main__item-link">
-                    <img src="images/mame-sekainomame.jpg" alt="世界の豆" class="main__item-image">
-                    <h2 class="main__item-title">世界の豆</h2>
-                    <p class="main__item-text">Mr.ビーンズ</p>
-                </a>
-            </div>
-            <div class="main__item">
-                <a href="azuki.html" class="main__item-link">
-                    <img src="images/mame-about.jpg" alt="このサイトについて" class="main__item-image">
-                    <h2 class="main__item-title">このサイトについて</h2>
-                    <p class="main__item-text">お豆の知識だよ！</p>
-                </a>
-            </div>
-        </section>
+        </main>
 
         <footer class="footer">
             <nav class="footer__nav">
@@ -193,7 +167,6 @@
 
     <script src="js/template.js" defer></script>
     <script src="js/carousel.js" defer></script>
-
 </body>
 
 </html>
