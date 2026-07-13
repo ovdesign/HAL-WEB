@@ -37,6 +37,7 @@
         <section id="slider">
             <div class="slider__outer">
                 <transition-group name="fade">
+                    <!--　配列からスライドを表示する処理 -->
                     <div class="slider__inner" v-for="(slide, idx) in slides" v-show="current_slide === idx" :key="slide.img">
                         <img class="slider__image" :src="slide.img">
                     </div>
