@@ -1,0 +1,15 @@
+/* ==========================================================
+   Footer
+========================================================== */
+
+.footer {
+  padding-block: var(--space-3xl);
+  background-color: var(--color-surface-subtle);
+}
+
+.footer__copyright {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  text-align: center;
+}

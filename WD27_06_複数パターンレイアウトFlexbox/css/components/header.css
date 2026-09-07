@@ -1,0 +1,45 @@
+/* ==========================================================
+   Header
+========================================================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(100% - var(--space-lg), var(--layout-container-lg));
+  height: var(--header-height);
+  margin-inline: auto;
+}
+
+.header__logo {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.header__logo-link {
+  color: inherit;
+  transition: opacity var(--duration-fast);
+}
+
+.header__logo-link:hover {
+  opacity: 0.8;
+}
+
+@media (width < 960px) {
+  .header__body {
+    position: relative;
+    width: min(100% - var(--space-lg), var(--layout-container-md));
+  }
+
+  .header__logo {
+    margin-inline-start: var(--space-sm);
+  }
+}

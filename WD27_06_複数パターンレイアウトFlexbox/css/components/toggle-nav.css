@@ -1,0 +1,56 @@
+/* ==========================================================
+   Toggle navigation
+========================================================== */
+
+#toggle-nav {
+  display: none;
+}
+
+@media (width < 960px) {
+  .toggle {
+    position: absolute;
+    top: 0.75rem;
+    right: 0;
+    z-index: 10;
+    width: 2rem;
+    cursor: pointer;
+  }
+
+  .toggle-item {
+    position: relative;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    background-color: var(--color-text-default);
+    transition:
+      background-color var(--duration-slow),
+      transform var(--duration-slow);
+  }
+
+  .toggle-item:nth-of-type(2) {
+    margin-block: var(--space-xs);
+  }
+
+  #toggle-nav:checked ~ .toggle {
+    height: 1.75rem;
+  }
+
+  #toggle-nav:checked ~ .toggle .toggle-item {
+    background-color: var(--color-bg-default);
+  }
+
+  #toggle-nav:checked ~ .toggle .toggle-item:nth-of-type(1) {
+    margin-block-start: var(--space-2xs);
+    transform: rotate(45deg);
+  }
+
+  #toggle-nav:checked ~ .toggle .toggle-item:nth-of-type(2) {
+    margin-block-start: calc(var(--space-2xs) * -1);
+    transform: rotate(-45deg);
+  }
+
+  #toggle-nav:checked ~ .nav__menu {
+    opacity: 1;
+    visibility: visible;
+  }
+}
