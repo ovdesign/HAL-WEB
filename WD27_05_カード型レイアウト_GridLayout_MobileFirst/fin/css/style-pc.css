@@ -26,6 +26,7 @@
 .main {
   grid-template-columns: repeat(4, 1fr);
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  /* fr = fraction（分数に由来） */
 }
 
 /* secondページ：2列の横並びに変更（テキストが左、ビジュアルが右）
