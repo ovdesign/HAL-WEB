@@ -1,0 +1,39 @@
+@charset 'utf-8';
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1em 0;
+  background: #363636;
+}
+
+header,
+aside,
+article,
+footer {
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+}
+
+.grid {
+  display: grid;
+  /* grid-template-columns: 150px auto 150px; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+
+header,
+footer {
+  grid-column: 1 / 4;
+}
+
+@media all and (max-width: 700px) {
+  aside,
+  article {
+    grid-column: 1 / 4;
+  }
+}

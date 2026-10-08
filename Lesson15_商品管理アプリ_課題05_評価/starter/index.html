@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson15 商品管理アプリ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>商品管理アプリ</h1>
+<section class="card">
+<h2>商品登録</h2>
+<div class="grid">
+<input id="name" type="text" placeholder="商品名">
+<input id="category" type="text" placeholder="カテゴリ">
+<input id="price" type="number" placeholder="価格">
+</div>
+<button id="addButton">登録</button>
+<p id="message"></p>
+</section>
+<section class="card">
+<h2>検索</h2>
+<input id="keyword" type="text" placeholder="商品名で検索">
+<div class="button-group">
+<button id="searchButton">検索</button>
+<button id="showAllButton">全件表示</button>
+</div>
+</section>
+<section class="card">
+<h2>商品一覧</h2>
+<p id="count"></p>
+<ul id="productList"></ul>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
