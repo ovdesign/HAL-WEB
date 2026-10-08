@@ -1,0 +1,30 @@
+Mobile Width Website
+https://sankoudesign.com/category/mobilefirst/
+
+変更するhtml&scss
+index.html(各wrapperを追加)
+page001.html(各wrapperを追加)
+_main.scss
+_base.scss
+_header.scss
+
+_main.scss
+	・すべてをスマホサイズに追加変更削除
+	・@mediaは全て削除
+
+_header.scss
+	second-pageのメインビジュアルのサイズ変更
+
+_base.scss
+	・シングルカラム設定
+		bodyにbackground-image追加
+		.wrapperを追加でシングルカラム設定実行
+	
+	・2カラム設定実行
+		左画面にロゴエリア＆ロゴ追加
+			.wrapper__left　.wrapper__left__item"
+		右画面設定
+			.wrapper__right　
+		コンテンツエリアラッパー追加
+			.wrapper__contents
+	

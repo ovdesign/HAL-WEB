@@ -1,0 +1,258 @@
+@charset "UTF-8";
+
+html {
+  font-size: 62.5%;
+}
+/**
+* Body
+*/
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", sans-serif;
+  color: #444;
+  background-color: #fff;
+  background-image: url(../img/bg_body.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+@media (768px < width) {
+  body {
+    background-size: 100% auto;
+  }
+}
+
+/*
+* ナビゲーションメニュー用のスタイル
+*/
+/* ロゴサイズ設定 */
+.site-logo img {
+  width: 280px;
+}
+@media (width < 768px) {
+  .site-logo img {
+    width: 140px;
+  }
+}
+
+/* トグルメニューカスタマイズ */
+.navbar-expand-lg {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.navbar-expand-lg .navbar-nav li {
+  padding-inline-start: 4rem;
+  margin: 1rem 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-shadow: 1px 1px 2px #000;
+}
+.navbar-expand-lg .navbar-nav {
+  padding: 1rem 0;
+}
+.navbar-expand-lg .navbar-nav li a {
+  color: #ff66a0;
+  text-decoration: none;
+}
+.navbar-expand-lg .navbar-nav li a:hover {
+  color: #fff;
+}
+/* デフォルトのハンバーガーメニュー（SVG）を上書き */
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,116,171,1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+/* ハンバーガーメニューサイズの上書き */
+.navbar-toggler-icon {
+  width: 2em;
+  height: 2em;
+}
+
+/**
+* Main: メインビジュアル
+*/
+.main-visual {
+  margin-block-start: 8rem;
+  margin-block-end: 10rem;
+}
+.main-visual__catch {
+  margin-block-end: 3rem;
+}
+.main-visual__catch img {
+  max-width: 100%;
+  padding: 8rem 2rem;
+}
+.main-visual__description {
+  font-size: 1.6rem;
+  line-height: 2;
+  letter-spacing: 0.125rem;
+  color: #fff;
+}
+@media (width < 768px) {
+  .main-visual__description {
+    padding: 0 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+/**
+*  Main: 共通
+*/
+.main {
+  margin: auto;
+}
+@media (1200px <= width) {
+  .main {
+    width: 1200px;
+  }
+}
+
+@media (768px <= width < 1200px) {
+  .main {
+    box-shadow: 0 1px 6px rgb(0, 0, 0, 0.25);
+  }
+}
+
+@media (width >= 768px) {
+  .container-main {
+    padding: 4rem;
+  }
+}
+
+/**
+*  Main: 注目コンテンツ
+*/
+.features {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.features dl {
+  max-width: 500px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+.features dl dt {
+  padding-block-start: 0.6rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.6rem;
+  font-weight: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+.features dl dd p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin: 2rem auto;
+}
+.features .btn-more {
+  margin-block-end: 6rem;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.6rem;
+  display: block;
+  color: #000;
+}
+
+/**
+*  Main: 店舗情報
+*/
+.shop-info {
+  background-color: #eee;
+}
+.shop-info__title {
+  margin-block-end: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
+  letter-spacing: 0.125rem;
+}
+.shop-info__title::before {
+  margin-inline-end: 1rem;
+  content: url(../img/icon_head.png);
+}
+
+/**
+*  Main: 店舗情報 (ニュース)
+*/
+.news {
+  margin: 5rem auto;
+}
+.item {
+  margin-block-end: 2rem;
+  display: flex;
+}
+.item__img {
+  margin-inline-end: 2rem;
+}
+.item__img img {
+  width: 100px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+}
+.item__body {
+  height: 100px;
+  width: 90%;
+  overflow: hidden;
+}
+.item__body h3 {
+  margin-block-end: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.item__body p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  overflow: hidden;
+}
+@media (width < 768px) {
+  .item:last-child {
+    margin-block-end: 0;
+  }
+}
+
+/**
+*  Main: 店舗情報 (アクセス)
+*/
+.access {
+  margin: 5rem auto;
+}
+@media (width < 768px) {
+  .access {
+    margin-block-start: 0;
+  }
+}
+.access__map {
+  border: 5px solid #fff;
+}
+.access__map iframe {
+  width: 100%;
+  height: 360px;
+}
+.access__body h3 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: 2rem auto;
+}
+.access__body p {
+  font-size: 1.4rem;
+  line-height: 1.75;
+  margin: 1rem auto 0;
+}
+
+/**
+* フッター用のスタイル
+*/
+.footer {
+  height: 100px;
+}
+.footer__totop {
+  padding: 2rem 0;
+}
+.footer__copyright {
+  padding: 3rem 0;
+  background-color: #000;
+  color: #ff66a0;
+}
+.footer__copyright p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.btn__totop img {
+  width: 30px;
+}

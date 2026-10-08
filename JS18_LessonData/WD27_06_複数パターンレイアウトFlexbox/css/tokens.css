@@ -1,0 +1,66 @@
+:root {
+  /* Typography */
+  --font-family-base: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+
+  /* Font size */
+  --font-size-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.875rem); /* 12px - 14px */
+  --font-size-sm: clamp(0.875rem, 0.84rem + 0.18vw, 1rem); /* 14px - 16px */
+  --font-size-md: clamp(1rem, 0.96rem + 0.2vw, 1.125rem); /* 16px - 18px */
+  --font-size-lg: clamp(1.25rem, 1.16rem + 0.45vw, 1.375rem); /* 20px - 22px */
+  --font-size-xl: clamp(1.5rem, 1.28rem + 1.1vw, 1.875rem); /* 24px - 30px */
+  --font-size-2xl: clamp(2rem, 1.72rem + 1.4vw, 2.5rem); /* 32px - 40px */
+
+  /* Font weight */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Line height */
+  --line-height-base: 1.75;
+  --line-height-heading: 1.6;
+
+  /* Color primitives */
+  --color-neutral-900: #333333;
+  --color-neutral-100: #f0f0f0;
+  --color-neutral-200: #dbdbdb;
+  --color-neutral-300: #bfbfbf;
+  --color-white: #ffffff;
+  --color-overlay-strong: rgba(0, 0, 0, 0.8);
+
+  /* Semantic colors */
+  --color-text-default: var(--color-neutral-900);
+  --color-bg-default: var(--color-white);
+  --color-surface-subtle: var(--color-neutral-100);
+  --color-surface-muted: var(--color-neutral-200);
+  --color-surface-strong: var(--color-neutral-300);
+  --color-overlay-default: var(--color-overlay-strong);
+
+  /* Layout */
+  --layout-container-lg: 1200px;
+  --layout-container-md: 960px;
+  --breakpoint-md: 960px;
+
+  /* Spacing */
+  --space-2xs: 0.25rem; /* 4px */
+  --space-xs: 0.5rem; /* 8px */
+  --space-sm: 1rem; /* 16px */
+  --space-md: 1.25rem; /* 20px */
+  --space-lg: 2rem; /* 32px */
+  --space-xl: 2.5rem; /* 40px */
+  --space-2xl: 3.75rem; /* 60px */
+  --space-3xl: 6.25rem; /* 100px */
+
+  /* Gap */
+  --gap-sm: 1.25rem; /* 20px */
+  --gap-md: 1.5rem; /* 24px */
+  --gap-lg: 2.5rem; /* 40px */
+  --gap-nav: clamp(2rem, 6vw, 6.25rem);
+
+  /* Header */
+  --header-height: 3.75rem; /* 50px */
+
+  /* Motion */
+  --duration-fast: 0.2s;
+  --duration-base: 0.3s;
+  --duration-slow: 0.5s;
+  --ease-out: ease-out;
+}

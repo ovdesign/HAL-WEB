@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid Layout</title>
+    <style>
+        body {
+            background: #EDEDED;
+            color: #666;
+            width: 800px;
+            margin: auto;
+        }
+
+        table {
+            margin-bottom: 100px;
+        }
+
+        th {
+            width: 250px;
+            text-align: left;
+            vertical-align: top;
+            color: #18A3FF
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="toc_3">CSS Grid Layoutジェネレーター</h2>
+    <table>
+        <tbody>
+            <tr>
+                <th>CSS Grid Generator</th>
+                <td><a href="https://cssgrid-generator.netlify.app/" target="_blank">https://cssgrid-generator.netlify.app/</a></td>
+            </tr>
+            <tr>
+                <th>Layoutit!</th>
+                <td><a href="https://grid.layoutit.com/" target="_blank">https://grid.layoutit.com/</a></td>
+            </tr>
+            <tr>
+                <th>CSS Layout Generator</th>
+                <td><a href="https://layout.bradwoods.io/" target="_blank">https://layout.bradwoods.io/</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 id="toc_3">CSS Grid Layoutの概要</h2>
+    <table>
+        <tbody>
+            <tr>
+                <th>グリッドコンテナ</th>
+                <td>display:grid;を指定された要素。</td>
+            </tr>
+            <tr>
+                <th>グリッドアイテム</th>
+                <td>display:grid;を指定された要素の直下の子要素。<br>
+                    孫要素はグリッドアイテムとみなされない。</td>
+            </tr>
+            <tr>
+                <th>グリッドトラック</th>
+                <td>gridのcolumn（列）とrow（行）の総称。<br>
+                    htmlのtableタグをイメージしてもらうとわかりやすいです。</td>
+            </tr>
+            <tr>
+                <th>グリッドライン</th>
+                <td>グリッドトラック間の線。</td>
+            </tr>
+            <tr>
+                <th>グリッドセル</th>
+                <td>グリッドラインによって分けられた個々のスペース。</td>
+            </tr>
+            <tr>
+                <th>グリッドエリア</th>
+                <td>複数のセルをまとめたグリッド内の特定の領域。</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 id="toc_4">gridのプロパティ</h2>
+    <h3 id="toc_5">グリッドコンテナのプロパティ</h3>
+    <table>
+        <tbody>
+            <tr>
+                <th>grid</th>
+                <td>要素をグリッドコンテナとして定義する。</td>
+            </tr>
+            <tr>
+                <th>grid-template-columns</th>
+                <td>グリッドトラック（列）のサイズを指定する。列のトラックの幅を半角スペースで区切って指定</td>
+            </tr>
+            <tr>
+                <th>grid-template-rows</th>
+                <td>グリッドトラック（行）のサイズを指定する。行のトラックの高さを半角スペースで区切って指定</td>
+            </tr>
+            <tr>
+                <th>grid-template-areas</th>
+                <td>グリッドエリアの名前を参照して、グリッドテンプレートを定義する。</td>
+            </tr>
+            <tr>
+                <th>grid-template</th>
+                <td>grid-template-columns、grid-template-rows、grid-template-areasを指定できるショートハンド。</td>
+            </tr>
+            <tr>
+                <th>grid-column-gap</th>
+                <td>グリッドトラック（列）の間を指定する。</td>
+            </tr>
+            <tr>
+                <th>grid-row-gap</th>
+                <td>グリッドトラック（行）の間を指定する。</td>
+            </tr>
+            <tr>
+                <th>grid-gap</th>
+                <td>grid-column-gap、grid-row-gapを指定できるショートハンド。</td>
+            </tr>
+            <tr>
+                <th>justify-items</th>
+                <td>グリッドアイテムの行方向の整列。</td>
+            </tr>
+            <tr>
+                <th>align-items</th>
+                <td>グリッドアイテムの列方向の整列。</td>
+            </tr>
+            <tr>
+                <th>justify-content</th>
+                <td>グリッドトラックの行方向の整列。</td>
+            </tr>
+            <tr>
+                <th>align-content</th>
+                <td>グリッドトラックの列方向の整列。</td>
+            </tr>
+            <tr>
+                <th>grid-auto-columns</th>
+                <td>自動的に生成されたグリッドトラックのサイズを指定する。</td>
+            </tr>
+            <tr>
+                <th>grid-auto-rows</th>
+                <td>自動的に生成されたグリッドトラックのサイズを指定する。</td>
+            </tr>
+            <tr>
+                <th>grid-auto-flow</th>
+                <td>明示的に配置されていないグリッドアイテムの配置を指定する。</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 id="toc_6">グリッドアイテムのプロパティ</h3>
+    <table>
+        <tbody>
+            <tr>
+                <th>grid-column-start</th>
+                <td>グリッドアイテム（列）の開始位置を指定する。</td>
+            </tr>
+            <tr>
+                <th>grid-column-end</th>
+                <td>グリッドアイテム（列）の終了位置を指定する。</td>
+            </tr>
+            <tr>
+                <th>grid-row-start</th>
+                <td>グリッドアイテム（行）の開始位置を指定する。</td>
+            </tr>
+            <tr>
+                <th>grid-row-end</th>
+                <td>グリッドアイテム（行）の終了位置を指定する。</td>
+            </tr>
+            <tr>
+                <th>grid-column</th>
+                <td>grid-column-start、grid-column-endを指定できるショートハンド。アイテムが占める列のラインの番号をスラッシュ区切りで指定する</td>
+            </tr>
+            <tr>
+                <th>grid-row</th>
+                <td>grid-row-start、grid-row-endを指定できるショートハンド。アイテムが占める行のラインの番号をスラッシュ区切りで指定する</td>
+            </tr>
+            <tr>
+                <th>grid-area</th>
+                <td>グリッドセルに名前を付けてgrid-template-areasプロパティで参照できるようにする。<br></td>
+            </tr>
+            <tr>
+                <th>justify-self</th>
+                <td>グリッドアイテム内のコンテンツを行方向に整列する。</td>
+            </tr>
+            <tr>
+                <th>align-self</th>
+                <td>グリッドアイテム内のコンテンツを列方向に整列する。</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
