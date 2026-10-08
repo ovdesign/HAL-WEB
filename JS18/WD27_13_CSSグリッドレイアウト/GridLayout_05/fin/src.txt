@@ -1,0 +1,24 @@
+Vous n’aurez pas deux fois l’occasion de faire une première bonne impression.
+<!-- 良い第一印象を作る機会は２度はない。 by ココ・シャネル-->
+
+Title of article
+作品概要
+この作品はこんな感じです。
+
+コンセプト
+この作品のコンセプトはこんな感じです。
+
+制作年月日
+2024/12/06
+
+制作期間
+4週間
+
+制作規模（スタッフ構成、担当者）
+ディレクター、デザイナー、エンジニア
+
+担当した業務
+デザイン全般
+
+制作環境（サーバ環境、使用ツール）
+AWS react VueJS

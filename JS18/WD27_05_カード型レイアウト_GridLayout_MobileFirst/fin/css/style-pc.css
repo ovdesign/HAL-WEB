@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* 基本レイアウト */
+.wrapper {
+  width: 960px;
+  margin: auto;
+}
+
+/* ナビゲーションの表示修正：PC用に調整
+-------------------------------------------------- */
+.header__nav-list {
+  gap: 2rem;
+}
+.header__nav-link {
+  font-size: 2rem;
+}
+
+/* フッター調整
+------------------------------------- */
+.footer__nav-list {
+  width: 40%;
+}
+
+/* メインコンテンツエリア：4列に変更、文字サイズアップ
+------------------------------------- */
+.main {
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  /* fr = fraction（分数に由来） */
+}
+
+/* secondページ：2列の横並びに変更（テキストが左、ビジュアルが右）
+------------------------------------- */
