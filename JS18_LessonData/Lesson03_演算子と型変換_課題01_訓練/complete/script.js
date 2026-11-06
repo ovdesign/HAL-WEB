@@ -8,7 +8,9 @@ const shippingFee = subtotal >= 5000 ? 0 : 600;
 const total = Math.floor((subtotal - discount) * (1 + taxRate) + shippingFee);
 
 // 上記のquantityの変換テスト
+//数字に1を足す
 console.log(quantityText + 1);
+//数に1を足す
 console.log(quantity + 1);
 
 const cart = document.getElementById("cart");
