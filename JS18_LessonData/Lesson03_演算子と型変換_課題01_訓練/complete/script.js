@@ -30,4 +30,8 @@ document.getElementById("judge").innerHTML = `
   <p>合格：${isPassed}</p>
   <p>優秀：${isGood}</p>
   <p>通常合格：${isPassed && !isGood}</p>
+
+  <p>${isPassed ? "合格" : "不合格"}</p>
+  <p>${isGood ? "優秀" : "普通"}</p>
+  <p>通常合格：${isPassed && !isGood ? "はい" : "いいえ"}</p>  
 `;
